@@ -1,5 +1,5 @@
 {
-  "name": "jev-verify-sandbox",
+  "name": "nearjev-sandbox",
   "private": true,
   "type": "module",
   "description": "Optional: runs the compiled Rust vault in a real local NEAR sandbox (near-workspaces).",

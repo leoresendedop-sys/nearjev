@@ -20,7 +20,7 @@ export interface VerifierDeps {
   ticketTtlMs?: number;
 }
 
-export class JevVerifier {
+export class NearJevVerifier {
   constructor(private d: VerifierDeps) {}
 
   async check(intent: PaymentIntent): Promise<CheckResult> {

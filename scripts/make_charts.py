@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate deterministic chart fixtures for Jev Verify.
+"""Generate deterministic chart fixtures for NearJev.
 
 Outputs:
   fixtures/market/near-usdt-1h.json   market "truth" (hourly candles, 7 days)

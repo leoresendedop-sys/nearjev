@@ -1,5 +1,5 @@
 // Builds the local demo world: simulated chain, vault contract, agent with a
-// function-call key, two reporter agents, and the Jev Verify service.
+// function-call key, two reporter agents, and the NearJev service.
 
 import { resolve } from "node:path";
 import { SimChain, TGAS, GAS_PRICE_YOCTO } from "./chain/sim.ts";
@@ -8,7 +8,7 @@ import { DEMO_KEYS } from "./keys.ts";
 import { FixtureChainData, SimBlocklist } from "./counterparty.ts";
 import { FixtureExtractor } from "./extract.ts";
 import { FixtureMarket } from "./market.ts";
-import { JevVerifier } from "./verifier.ts";
+import { NearJevVerifier } from "./verifier.ts";
 import { GuardedAgentWallet, type HumanApprover } from "./wrapper.ts";
 import { FIXTURES, near, readJson, sha256File } from "./util.ts";
 
@@ -71,7 +71,7 @@ export function buildWorld(opts: { askHuman?: HumanApprover; log?: (s: string) =
   // Counterparty accounts from the fixture (balances are illustrative).
   for (const id of Object.keys(fx.accounts)) if (!chain.has(id)) chain.createAccount(id, near(1));
 
-  const verifier = new JevVerifier({
+  const verifier = new NearJevVerifier({
     extractor: new FixtureExtractor(),
     market: new FixtureMarket(),
     chain: new FixtureChainData(chain),

@@ -1,4 +1,4 @@
-//! Pure, chain-independent policy rules for the Jev Verify vault.
+//! Pure, chain-independent policy rules for the NearJev vault.
 //! Kept free of near-sdk so they can be unit-tested anywhere and mirrored
 //! 1:1 by the TypeScript simulator in `src/chain/vault.ts`.
 

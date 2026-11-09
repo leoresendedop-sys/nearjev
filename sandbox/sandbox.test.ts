@@ -14,7 +14,7 @@ import { DEMO_KEYS } from "../src/keys.ts";
 import { near as N } from "../src/util.ts";
 
 const here = dirname(fileURLToPath(import.meta.url));
-const WASM = resolve(here, process.env.VAULT_WASM ?? "../contract/res/jev_policy_vault.wasm");
+const WASM = resolve(here, process.env.VAULT_WASM ?? "../contract/res/nearjev_policy_vault.wasm");
 const verifier = DEMO_KEYS.verifier();
 const human = DEMO_KEYS.human();
 

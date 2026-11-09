@@ -760,14 +760,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3bd1574e617a9a6c1f8f8181bd7e841e1f20e4277607ef28945765188d6284d4"
 
 [[package]]
-name = "jev-policy-vault"
-version = "0.1.0"
-dependencies = [
- "ed25519-dalek",
- "near-sdk",
-]
-
-[[package]]
 name = "jobserver"
 version = "0.1.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1138,6 +1130,14 @@ dependencies = [
  "thiserror",
  "tracing",
  "zeropool-bn",
+]
+
+[[package]]
+name = "nearjev-policy-vault"
+version = "0.1.0"
+dependencies = [
+ "ed25519-dalek",
+ "near-sdk",
 ]
 
 [[package]]

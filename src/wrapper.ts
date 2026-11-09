@@ -12,7 +12,7 @@
 import type { KeyPair } from "./keys.ts";
 import type { SimChain, Outcome, SignedTransaction } from "./chain/sim.ts";
 import { TGAS } from "./chain/sim.ts";
-import type { JevVerifier } from "./verifier.ts";
+import type { NearJevVerifier } from "./verifier.ts";
 import type { CheckResult, PaymentIntent } from "./types.ts";
 
 export type HumanApprover = (r: CheckResult, intent: PaymentIntent) => Promise<boolean>;
@@ -34,7 +34,7 @@ export class GuardedAgentWallet {
       agentId: string;
       fcKey: KeyPair;
       vaultId: string;
-      verifier: JevVerifier;
+      verifier: NearJevVerifier;
       /** Called on WARN. Default: never approve (the human was not asked). */
       askHuman?: HumanApprover;
       /** Human owner co-sign key — lives with the human, used only after approval. */

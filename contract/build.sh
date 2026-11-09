@@ -7,7 +7,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 cargo build --target wasm32-unknown-unknown --release
 mkdir -p res
-npx -y -p binaryen@132 wasm-opt target/wasm32-unknown-unknown/release/jev_policy_vault.wasm \
-  -Oz --signext-lowering --mvp-features -o res/jev_policy_vault.wasm
-ls -la res/jev_policy_vault.wasm
-sha256sum res/jev_policy_vault.wasm
+npx -y -p binaryen@132 wasm-opt target/wasm32-unknown-unknown/release/nearjev_policy_vault.wasm \
+  -Oz --signext-lowering --mvp-features -o res/nearjev_policy_vault.wasm
+ls -la res/nearjev_policy_vault.wasm
+sha256sum res/nearjev_policy_vault.wasm

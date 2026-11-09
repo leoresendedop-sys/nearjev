@@ -1,10 +1,10 @@
 [package]
-name = "jev-policy-vault"
+name = "nearjev-policy-vault"
 version = "0.1.0"
 edition = "2021"
 rust-version = "1.85"
 resolver = "3"
-description = "Jev Verify policy vault + shared blocklist for NEAR (track 06: Trust, but verify)"
+description = "NearJev policy vault + shared blocklist for NEAR (track 06: Trust, but verify)"
 license = "MIT"
 
 [lib]

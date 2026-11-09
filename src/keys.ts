@@ -39,7 +39,7 @@ const seed = (b: number) => Buffer.alloc(32, b);
 
 /** DEMO ONLY. Same seeds as contract/src/tests.rs so signatures are interchangeable. */
 export const DEMO_KEYS = {
-  verifier: () => keyFromSeed(seed(7), "DEMO verifier key (Jev Verify service)"),
+  verifier: () => keyFromSeed(seed(7), "DEMO verifier key (NearJev service)"),
   human: () => keyFromSeed(seed(9), "DEMO human-owner co-sign key"),
   agentFc: () => keyFromSeed(seed(11), "DEMO agent function-call key"),
   ownerFull: () => keyFromSeed(seed(13), "DEMO owner full-access key"),

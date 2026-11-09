@@ -1,4 +1,4 @@
-// Shared types for Jev Verify.
+// Shared types for NearJev.
 
 export type Verdict = "allow" | "warn" | "block";
 

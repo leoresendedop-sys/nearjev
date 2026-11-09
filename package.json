@@ -1,5 +1,5 @@
 {
-  "name": "jev-verify",
+  "name": "nearjev",
   "version": "0.1.0",
   "description": "Trust, but verify: a counterparty + visual-claim check for NEAR agents that pay. Vision extracts the chart's claims, Jev vetoes, and the wallet only signs with a function-call key.",
   "license": "MIT",

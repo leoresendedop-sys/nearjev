@@ -24,9 +24,9 @@ createServer(async (req, res) => {
       intent.evidenceImage = p;
     }
     const r = await w.verifier.check(intent);
-    res.writeHead(200, { "content-type": "application/json" });
-    res.end(JSON.stringify({ verdict: r.decision.verdict, reasons: r.decision.reasons, rules: r.decision.rules, scores: r.decision.scores, visual: r.visual, ticket: r.ticket ?? null }, null, 2));
+    res.writeHead(200, { "content-type": "application/json", "x-service": "NearJev" });
+    res.end(JSON.stringify({ service: "NearJev", verdict: r.decision.verdict, reasons: r.decision.reasons, rules: r.decision.rules, scores: r.decision.scores, visual: r.visual, ticket: r.ticket ?? null }, null, 2));
   } catch (e) {
     res.writeHead(400, { "content-type": "application/json" }).end(JSON.stringify({ error: (e as Error).message }));
   }
-}).listen(port, "127.0.0.1", () => console.log(`Jev Verify check service (fixture mode) on http://127.0.0.1:${port}/check`));
+}).listen(port, "127.0.0.1", () => console.log(`NearJev check service (fixture mode) on http://127.0.0.1:${port}/check`));
