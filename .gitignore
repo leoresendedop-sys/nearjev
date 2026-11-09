@@ -6,3 +6,4 @@ dist/
 *.log
 .jev-runtime/
 !.env.example
+.near-testnet/

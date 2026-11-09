@@ -1,0 +1,7 @@
+{
+  "name": "nearjev-testnet",
+  "private": true,
+  "type": "module",
+  "description": "Deploy NearJev to NEAR testnet and run the live proof. Keys go to ../.near-testnet/ (gitignored).",
+  "dependencies": { "near-api-js": "5.1.1" }
+}

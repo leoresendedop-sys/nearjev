@@ -20,7 +20,10 @@
     "build:contract": "bash contract/build.sh",
     "test:sandbox": "cd sandbox && npm test",
     "setup:sandbox": "cd sandbox && npm install && node node_modules/near-sandbox/install.js",
-    "export-ticket": "tsx scripts/export-ticket.ts"
+    "export-ticket": "tsx scripts/export-ticket.ts",
+    "setup:testnet": "cd testnet && npm install",
+    "deploy:testnet": "tsx testnet/deploy.ts",
+    "proof:testnet": "tsx testnet/proof.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

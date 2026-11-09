@@ -35,9 +35,18 @@ npm run test:contract    # 16 Rust tests for the vault contract (cargo test, nat
 npm run build:contract   # wasm → contract/res/nearjev_policy_vault.wasm (prebuilt copy is committed)
 npm run setup:sandbox    # installs near-workspaces + downloads the sandbox binary
 npm run test:sandbox     # 4 tests on a real node: FC-key-only agent, allow/block/forged/warn, no direct transfer
+
+# Optional: NEAR testnet (keys stay in .near-testnet/, gitignored)
+npm run setup:testnet && npm run deploy:testnet && npm run proof:testnet
 ```
 
 Default mode is **fixture mode**: deterministic market candles, recorded vision output, fictional testnet accounts, demo keys. Nothing needs a secret.
+
+## Live on NEAR testnet
+
+The vault is deployed at [`vault.nearjev-3c1cfe.testnet`](https://testnet.nearblocks.io/address/vault.nearjev-3c1cfe.testnet). The agent [`agent.nearjev-3c1cfe.testnet`](https://testnet.nearblocks.io/address/agent.nearjev-3c1cfe.testnet) holds **only a function-call key**. In the live proof, the vault refused a forged ticket, a signed ticket to a blocklisted account, a BLOCK ticket, and a WARN with no human co-signature, and it paid a 0.05 NEAR ALLOW ticket. The direct transfer was rejected by the protocol (`RequiresFullAccess`). Accounts and explorer links: [docs/testnet.md](docs/testnet.md).
+
+Demo video: [docs/nearjev-attack-demo.mp4](docs/nearjev-attack-demo.mp4) (57 s).
 
 ## The attack demo
 
