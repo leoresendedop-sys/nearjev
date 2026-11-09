@@ -1,0 +1,26 @@
+[package]
+name = "jev-policy-vault"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Jev Verify policy vault + shared blocklist for NEAR (track 06: Trust, but verify)"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = "=5.24.0"
+
+[dev-dependencies]
+near-sdk = { version = "=5.24.0", features = ["unit-testing"] }
+ed25519-dalek = "2"
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+overflow-checks = true

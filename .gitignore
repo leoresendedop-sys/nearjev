@@ -1,0 +1,8 @@
+node_modules/
+contract/target/
+dist/
+.env
+.env.*
+*.log
+.jev-runtime/
+!.env.example

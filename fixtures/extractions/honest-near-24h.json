@@ -1,0 +1,14 @@
+{
+  "_note": "Recorded vision-extractor output (fixture mode). Keyed by image sha256; a different image will not match.",
+  "image": "charts/honest-near-24h.png",
+  "image_sha256": "3b36a0fb71710e11cd677c2e1ac5cb62cb020815ec8149c9808af6df68a70eb3",
+  "claims": {
+    "asset": "NEAR/USDT",
+    "quoted_price": 2.761,
+    "pct_change": -1.36,
+    "timeframe": "24h",
+    "profit_claim_pct": null,
+    "as_of": "2026-11-08T12:00:00Z",
+    "embedded_instructions": []
+  }
+}

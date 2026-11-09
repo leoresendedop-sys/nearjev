@@ -1,0 +1,30 @@
+{
+  "name": "jev-verify",
+  "version": "0.1.0",
+  "description": "Trust, but verify: a counterparty + visual-claim check for NEAR agents that pay. Vision extracts the chart's claims, Jev vetoes, and the wallet only signs with a function-call key.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "tsx --test test/*.test.ts",
+    "test:contract": "cd contract && cargo test",
+    "test:all": "npm test && npm run test:contract",
+    "attack-demo": "tsx scripts/attack-demo.ts",
+    "demo": "tsx scripts/demo.ts",
+    "check": "tsx scripts/check.ts",
+    "serve": "tsx src/server.ts",
+    "charts": "python3 scripts/make_charts.py",
+    "typecheck": "tsc --noEmit",
+    "build:contract": "bash contract/build.sh",
+    "test:sandbox": "cd sandbox && npm test",
+    "setup:sandbox": "cd sandbox && npm install && node node_modules/near-sandbox/install.js",
+    "export-ticket": "tsx scripts/export-ticket.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

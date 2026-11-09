@@ -1,0 +1,22 @@
+{
+  "_note": "FIXTURE chain data (testnet-style names, all fictional). 'now' is the market fixture as_of: 2026-11-08T12:00:00Z. Live mode reads NEAR RPC + an indexer instead.",
+  "now_ms": 1794139200000,
+  "accounts": {
+    "agent.jev.testnet":      { "created_days_ago": 30,  "tx_count": 41,   "is_contract": false },
+    "vault.jev.testnet":      { "created_days_ago": 30,  "tx_count": 60,   "is_contract": true,  "code_changed_days_ago": 30 },
+    "coffee-shop.testnet":    { "created_days_ago": 410, "tx_count": 1287, "is_contract": false },
+    "swap-router.testnet":    { "created_days_ago": 365, "tx_count": 98012, "is_contract": true, "code_changed_days_ago": 90 },
+    "fresh-dex.testnet":      { "created_days_ago": 120, "tx_count": 530,  "is_contract": true,  "code_changed_days_ago": 0.4 },
+    "new-merchant.testnet":   { "created_days_ago": 3,   "tx_count": 4,    "is_contract": false },
+    "payout-unlock.testnet":  { "created_days_ago": 2,   "tx_count": 3,    "is_contract": false }
+  },
+  "interactions": {
+    "agent.jev.testnet": { "coffee-shop.testnet": 6, "swap-router.testnet": 4 }
+  },
+  "blocklist_reports": {
+    "payout-unlock.testnet": [
+      { "reporter": "agent-a.testnet", "reason": "Fake 'unlock your profits' payout; funds never returned", "evidence_uri": "ipfs://bafy-demo-evidence-agent-a", "evidence_file": "charts/spoofed-profit.png" },
+      { "reporter": "agent-b.testnet", "reason": "Prompt-injected screenshot asked agent to pay this address", "evidence_uri": "ipfs://bafy-demo-evidence-agent-b", "evidence_file": "charts/spoofed-profit.png" }
+    ]
+  }
+}

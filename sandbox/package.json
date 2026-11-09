@@ -1,0 +1,8 @@
+{
+  "name": "jev-verify-sandbox",
+  "private": true,
+  "type": "module",
+  "description": "Optional: runs the compiled Rust vault in a real local NEAR sandbox (near-workspaces).",
+  "scripts": { "test": "../node_modules/.bin/tsx --test sandbox.test.ts" },
+  "devDependencies": { "near-workspaces": "^5.0.0" }
+}
